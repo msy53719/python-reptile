@@ -13,8 +13,10 @@ def get_soup(url):
 # s=soup.prettify()
 def get_page_all_url(url):
     page_url=[]
+    link_url=[]
     for link in get_soup(url).find_all('a'):
-        print(link.get('href'))
+        #print(link.get('href'))
+
         if str(link.get('href')).endswith('.html') and str(link.get('href')).startswith('/'):
             # print(link.get('href'))
             url = []
@@ -40,12 +42,12 @@ def get_image_url(url):
     return src_url
 
 
-def get_union_image_url(str):
-    union_url = []
-    for url in str:
-        if url not in get_image_url():
-            union_url.append(url)
-    return union_url
+#def get_union_image_url(str):
+ #   union_url = []
+  #  for url in str:
+   #     if url not in get_image_url():
+    #        union_url.append(url)
+    #return union_url
     # return src_url
     # if img.get('src').endswith('.jpg'):
     # print (img.get('src'))
@@ -76,5 +78,10 @@ def save_img():
 # for url in get_image_url():
 #   print(url)
 # save_img()
-for sre in get_image_url():
-    print(sre)
+#for sre in get_image_url():
+##    print(sre)
+ls='python'
+print(ls[::2])
+
+for s in 'stingdg':
+    print(s)

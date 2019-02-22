@@ -3,7 +3,7 @@ from html.parser import HTMLParser
 
 
 def hello(str):
-    print('hello world' + str)
+    print('hello world' + '\t' + str)
 
 
 def gethtml(url):
@@ -40,7 +40,8 @@ def gethtmlheader(url):
     except:
         return 'error'
 
-# hello('python')
+
+hello('python')
 # 百度入口
 # print(gethtml('http://www.baidu.com/s?ie=ie=utf-8&&wd=12306'))
 # 网站入口

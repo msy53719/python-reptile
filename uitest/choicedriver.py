@@ -19,8 +19,6 @@ def login():
     driver.implicitly_wait(6000)
     #driver.find_element_by_id("username").send_keys("")
     #driver.find_element_by_id("password").send_keys("")
-
-    driver.quit()
     timer = threading.Timer(10, login)
     timer.start()
 
@@ -30,4 +28,14 @@ def keyer():
     timer.start()
 
 #keyer()
-print(time.localtime(time.time()))
+#print(time.localtime(time.time()))
+def login_erp():
+    driver = webdriver.Chrome("../drivers/chromedriver.exe")
+    driver.get("")
+    driver.maximize_window()
+    driver.find_element_by_id("username").send_keys("")
+    driver.find_element_by_id("password").send_keys("")
+    driver.find_element_by_class_name("formsubmit_btn").click()
+    driver.find_element_by_tag_name("").click()
+
+login_erp()
